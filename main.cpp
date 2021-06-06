@@ -7,10 +7,10 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
-#include "sentences.typit"
-#include "participant.typit"
-#include "leaderboard.typit"
 using namespace std;
+#include "./sentences.typit"
+#include "./participant.typit"
+#include "./leaderboard.typit"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void printRoundHeader(int roundNumber)
