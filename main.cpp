@@ -16,12 +16,12 @@ using namespace std;
 void printRoundHeader(int roundNumber)
 {
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    for (int i = 0; i < log10((roundNumber==0)+roundNumber); i++)
+    for (int i = 0; i < log10((roundNumber == 0) + roundNumber); i++)
         cout << "~";
     cout << "\n";
     cout << "||------- ||R|O|U|N|D| |" << roundNumber << "|| -------||\n";
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    for (int i = 0; i < log10((roundNumber==0)+roundNumber); i++)
+    for (int i = 0; i < log10((roundNumber == 0) + roundNumber); i++)
         cout << "~";
     cout << "\n\n";
 }
@@ -32,7 +32,12 @@ int main()
     system("cls");
     int numberOfParticipants = 0;
     cout << "Enter total number of participants:\n";
-    cin >> numberOfParticipants;
+    while (numberOfParticipants <= 0)
+    {
+        cin >> numberOfParticipants;
+        if (numberOfParticipants <= 0)
+            cout << "Was that supposed to make any kind of sense?\n";
+    }
     system("cls");
     vector<participant> participants;
     for (int i = 0; i < numberOfParticipants; i++)
@@ -120,7 +125,7 @@ int main()
         {
             temp = "";
             system("cls");
-            printRoundHeader(i+1);
+            printRoundHeader(i + 1);
             participants[j].printName();
             cout << "'s turn\n\n";
             cout << "Given Sentence: \n\n";
@@ -131,7 +136,7 @@ int main()
             // while (sen2 != "READY")
             //     getline(cin >> ws, sen2);
             system("cls");
-            printRoundHeader(i+1);
+            printRoundHeader(i + 1);
             cout << sen1 << "\n\n";
             clock_t timer = clock();
             getline(cin >> ws, sen2);
@@ -143,7 +148,7 @@ int main()
                     score++;
             }
             system("cls");
-            printRoundHeader(i+1);
+            printRoundHeader(i + 1);
             participants[j].printName();
             cout << " took " << timeTaken << " seconds to type with an accuracy of " << ((double)(score * 100) / sen1.size()) << "%.\n";
 
