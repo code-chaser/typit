@@ -66,5 +66,11 @@ SCORING RULES:
                   iv) Luck ;)
             
 ``` -->
+## TECH STACK
+* C++
+
+___
+
 >##### *Happy Typing!!! :)*
+
 ___
