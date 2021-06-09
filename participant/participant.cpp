@@ -12,6 +12,7 @@ public:
     {
         cout << "Enter the name of participant " << n << ":\n";
         getline(cin >> ws, name);
+        cout << "\n";
         return;
     }
     void addScore(double score)
