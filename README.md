@@ -1,18 +1,25 @@
-# typit
+# typit &nbsp; ![views](https://visitor-badge.glitch.me/badge?page_id=code-chaser.code-chaser)
 ___
+
 ## INTRODUCTION
 A simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming in C++.
 <br><br>
+
 ___
+
 ## DESCRIPTION
+
 ___
+
 #### INPUTS
 1. Number of participants
 2. their names
 3. Number of rounds
 4. Desired difficulty level (1:Easy | 2:Medium | 3:Hard)
 5. And then, in each round every participant has to enter the given sentence
+
 ___
+
 <!-- ```
 INPUTS:
   1) Number of participants
@@ -25,7 +32,9 @@ After that, in each round all the participants take turns and type the given sta
 #### OUTPUTS
 1. After each turn of every participant, the tool shows the time taken by him to type, his accuracy &amp; score for that turn &amp; the total score as well.
 2. After each round the Leaderboard is shown with the total scores of all participants.
+
 ___
+
 <!-- ```
 OUTPUTS:
   1) After each turn of every participant, the tool shows the time taken by him to type, his accuracy & score for that turn and the
@@ -42,6 +51,7 @@ where:
    * Average Speed
    * Maximum Score among all the rounds
    * Luck ;)
+
 ___
 
 <!-- ```
