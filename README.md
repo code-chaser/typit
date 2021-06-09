@@ -1,4 +1,4 @@
-# typit &nbsp; ![views](https://visitor-badge.glitch.me/badge?page_id=code-chaser.code-chaser)
+# typit &nbsp; ![views](https://visitor-badge.glitch.me/badge?page_id=code-chaser.typit)
 ___
 
 ## INTRODUCTION
