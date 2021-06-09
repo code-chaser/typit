@@ -16,6 +16,24 @@ void showLeaderboard(vector<participant> participants, int numberOfParticipants)
     int scoreSpc = max(0, (int)log10(max(1, (int)participants[0].getTotalScore())) - 10);
     int netLen = 69 + rankSpc + partSpc + scoreSpc;
     int partA = 0, partB = partA + 12 + rankSpc, partC = partB + 41 + partSpc, partD = partC + 15 + scoreSpc; //indices
+    for (int i = 1; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    for (int i = 0; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "\n";
+    for (int i = 1; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "||------- | T | Y | P | I | T | -------||";
+    for (int i = 0; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "\n";
+    for (int i = 1; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    for (int i = 0; i < netLen-42; i += 2)
+        cout << " ";
+    cout << "\n\n";
     for (int i = 0; i < netLen; i++)
         cout << "~";
     cout << "\n||";

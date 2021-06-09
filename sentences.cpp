@@ -87,17 +87,17 @@ private:
         "paradox, states that an object can float in a quantity of water that has less "
         "volume than the object itself, if its average density is less than that of water.",
 
-        "This Pangram contains four a’s, one b, two c’s,"
-        "one d, thirty e’s, six f’s, five g’s, seven h’s,"
-        "eleven i’s, one j, one k, two l’s, two m’s, "
-        "eighteen n’s, fifteen o’s, two p’s, one q, "
-        "five r’s, twenty-seven s’s, eighteen t’s, "
-        "two u’s, seven v’s, eight w’s, two x’s, three y’s, & one z."};
+        "This Pangram contains four a's, one b, two c's,"
+        "one d, thirty e's, six f's, five g's, seven h's,"
+        "eleven i's, one j, one k, two l's, two m's, "
+        "eighteen n's, fifteen o's, two p's, one q, "
+        "five r's, twenty-seven s's, eighteen t's, "
+        "two u's, seven v's, eight w's, two x's, three y's, & one z."};
 
 public:
     sentences(int difficulty)
     {
-        srand ( time(NULL) );
+        srand(time(NULL));
         switch (difficulty)
         {
         case 1:
