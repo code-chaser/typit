@@ -8,9 +8,9 @@
 #include <algorithm>
 #include <iomanip>
 using namespace std;
-#include "./sentences.cpp"
-#include "./participant.cpp"
-#include "./leaderboard.cpp"
+#include "./sentences/sentences.cpp"
+#include "./participant/participant.cpp"
+#include "./leaderboard/leaderboard.cpp"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void printRoundHeader(int roundNumber)
@@ -25,7 +25,8 @@ void printRoundHeader(int roundNumber)
         cout << "~";
     cout << "\n\n";
 }
-void printMainHeader(){
+void printMainHeader()
+{
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     cout << "\n";
     cout << "||----- | T | Y | P | I | T | -----||\n";
@@ -39,7 +40,7 @@ int main()
     system("Color 0A");
     system("cls");
     printMainHeader();
-    cout<<"\n\n   W E L C O M E  T O  T Y P I T !   \n\n\n\n\n";
+    cout << "\n\n   W E L C O M E  T O  T Y P I T !   \n\n\n\n\n";
     system("pause");
     system("cls");
     printMainHeader();
@@ -49,7 +50,7 @@ int main()
     {
         cin >> numberOfParticipants;
         if (numberOfParticipants <= 0)
-            cout << "Was that supposed to make any kind of sense?\n";
+            cout << "Was that supposed to make any kind of sense?!\nAdd some sense and enter again!\n";
     }
     system("cls");
     printMainHeader();
