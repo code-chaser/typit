@@ -8,9 +8,9 @@
 #include <algorithm>
 #include <iomanip>
 using namespace std;
-#include "./sentences.typit"
-#include "./participant.typit"
-#include "./leaderboard.typit"
+#include "./sentences.cpp"
+#include "./participant.cpp"
+#include "./leaderboard.cpp"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void printRoundHeader(int roundNumber)
@@ -25,11 +25,24 @@ void printRoundHeader(int roundNumber)
         cout << "~";
     cout << "\n\n";
 }
+void printMainHeader(){
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    cout << "\n";
+    cout << "||----- | T | Y | P | I | T | -----||\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    cout << "\n\n";
+    return;
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main()
 {
     system("Color 0A");
     system("cls");
+    printMainHeader();
+    cout<<"\n\n   W E L C O M E  T O  T Y P I T !   \n\n\n\n\n";
+    system("pause");
+    system("cls");
+    printMainHeader();
     int numberOfParticipants = 0;
     cout << "Enter total number of participants:\n";
     while (numberOfParticipants <= 0)
@@ -39,6 +52,7 @@ int main()
             cout << "Was that supposed to make any kind of sense?\n";
     }
     system("cls");
+    printMainHeader();
     vector<participant> participants;
     for (int i = 0; i < numberOfParticipants; i++)
     {
@@ -47,6 +61,7 @@ int main()
     }
     system("cls");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    printMainHeader();
     int difficulty = 0;
     while (difficulty < 1 || difficulty > 3)
     {
@@ -59,11 +74,13 @@ int main()
     }
     system("cls");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    printMainHeader();
     int rounds = 0;
     cout << "Enter the number of rounds you want to play:\n";
     cin >> rounds;
     system("cls");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    printMainHeader();
     cout << "\nRead the instructions below carefully.\n\n\n";
     cout << ">>INSTRUCTIONS:" << endl;
     cout << "1)At the start of each round a sentence (difficulty level: ";
@@ -96,6 +113,7 @@ int main()
     // } while (temp != "NEXT" && temp != "next");
     system("pause");
     system("cls");
+    printMainHeader();
     cout << "\nRead the scoring & ranking rules carefully.\n\n\n";
     cout << ">>SCORING & RANKING:" << endl;
     cout << "1)Score of a participant is equal to: A/B (i.e. A divided by B) " << endl;
@@ -125,6 +143,7 @@ int main()
         {
             temp = "";
             system("cls");
+            printMainHeader();
             printRoundHeader(i + 1);
             participants[j].printName();
             cout << "'s turn\n\n";
@@ -136,6 +155,7 @@ int main()
             // while (sen2 != "READY")
             //     getline(cin >> ws, sen2);
             system("cls");
+            printMainHeader();
             printRoundHeader(i + 1);
             cout << sen1 << "\n\n";
             clock_t timer = clock();
@@ -148,6 +168,7 @@ int main()
                     score++;
             }
             system("cls");
+            printMainHeader();
             printRoundHeader(i + 1);
             participants[j].printName();
             cout << " took " << timeTaken << " seconds to type with an accuracy of " << ((double)(score * 100) / sen1.size()) << "%.\n";
