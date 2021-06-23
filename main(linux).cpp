@@ -1,8 +1,8 @@
-#define WINDOWS
+#define LINUX
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
+#include <ctime>
 #include <math.h>
 #include <vector>
 #include <algorithm>
@@ -37,12 +37,12 @@ void printMainHeader()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main()
 {
-    system("Color 0A");
-    system("cls");
+    system("clear");
     printMainHeader();
     cout << "\n\n   W E L C O M E  T O  T Y P I T !   \n\n\n\n\n";
-    system("pause");
-    system("cls");
+    cout << "Press enter to continue...\n";
+    getchar();
+    system("clear");
     printMainHeader();
     int numberOfParticipants = 0;
     cout << "Enter total number of participants:\n";
@@ -52,7 +52,7 @@ int main()
         if (numberOfParticipants <= 0)
             cout << "Was that supposed to make any kind of sense?!\nAdd some sense and enter again!\n";
     }
-    system("cls");
+    system("clear");
     printMainHeader();
     vector<participant> participants;
     for (int i = 0; i < numberOfParticipants; i++)
@@ -60,26 +60,23 @@ int main()
         participant temp(i + 1);
         participants.push_back(temp);
     }
-    system("cls");
+    system("clear");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     printMainHeader();
     int difficulty = 0;
+    cout << "Enter the difficulty level (1-Easy || 2-Medium || 3-Hard):\n";
+    cin >> difficulty;
+
     while (difficulty < 1 || difficulty > 3)
-    {
-        cout << "Enter the difficulty level (1-Easy || 2-Medium || 3-Hard):\n";
-        cin >> difficulty;
-        if (difficulty < 1 || difficulty > 3)
-        {
-            cout << "Invalid difficulty level!\n";
-        }
-    }
-    system("cls");
+        cout << "Invalid difficulty level!\n", cin >> difficulty;
+
+    system("clear");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     printMainHeader();
     int rounds = 0;
     cout << "Enter the number of rounds you want to play:\n";
     cin >> rounds;
-    system("cls");
+    system("clear");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     printMainHeader();
     cout << "\nRead the instructions below carefully.\n\n\n";
@@ -103,17 +100,14 @@ int main()
     cout << "2)Participants take turns one by one. First one to go is ";
     participants[0].printName();
     cout << ". The order remains same for every round." << endl;
-    //cout << "3)Each participant has to type 'READY' (case-sensitive and without the inverted commas) and press the 'ENTER' key to start his timer." << endl;
-    cout << "3)Each participant (on their turn) can see the sentence they have to type before their timer has started and once done, they can press any key to start typing and the timer starts automatically.\n";
+    cout << "3)Each participant (on their turn) can see the sentence they have to type before their timer has started and once done, they have to press enter to start typing and the timer starts automatically.\n";
     cout << "4)After that, once finished, press 'ENTER' key to end the timer and hence the turn." << endl;
-    cout << /* and once done, type 'NEXT' & press the 'ENTER' key to continue...*/ "\nNOTE: Screen will be cleared with the next keypress." << endl;
+    cout << "\nNOTE: Screen will be cleared with the next keypress." << endl;
     string temp;
-    // do
-    // {
-    //     cin >> temp;
-    // } while (temp != "NEXT" && temp != "next");
-    system("pause");
-    system("cls");
+    cout << "Press enter to continue...\n";
+    getchar();
+    getchar();
+    system("clear");
     printMainHeader();
     cout << "\nRead the scoring & ranking rules carefully.\n\n\n";
     cout << ">>SCORING & RANKING:" << endl;
@@ -133,7 +127,8 @@ int main()
     // {
     //     cin >> temp;
     // } while (temp != "START" && temp != "start");
-    system("pause");
+    cout << "Press enter to continue...\n";
+    getchar();
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     for (int i = 0; i < rounds; i++)
@@ -143,7 +138,7 @@ int main()
         for (int j = 0; j < numberOfParticipants; j++)
         {
             temp = "";
-            system("cls");
+            system("clear");
             printMainHeader();
             printRoundHeader(i + 1);
             participants[j].printName();
@@ -151,24 +146,25 @@ int main()
             cout << "Given Sentence: \n\n";
             cout << sen1 << "\n\n";
             string sen2 = "";
-            system("pause");
+            cout << "Press enter to continue...\n";
+            getchar();
             // cout << "Type 'READY' and press the 'ENTER' key to start the timer.\n";
             // while (sen2 != "READY")
             //     getline(cin >> ws, sen2);
-            system("cls");
+            system("clear");
             printMainHeader();
             printRoundHeader(i + 1);
             cout << sen1 << "\n\n";
             clock_t timer = clock();
             getline(cin >> ws, sen2);
-            double timeTaken = (((double)clock()) - timer) / ((double)CLOCKS_PER_SEC);
+            double timeTaken = (clock() - timer) / (double) CLOCKS_PER_SEC;
             int score = 0;
             for (int k = 0; k < min(sen1.size(), sen2.size()); k++)
             {
                 if (sen1[k] == sen2[k])
                     score++;
             }
-            system("cls");
+            system("clear");
             printMainHeader();
             printRoundHeader(i + 1);
             participants[j].printName();
@@ -186,7 +182,9 @@ int main()
             // cout << "\n\n\nType 'CONTINUE' and press the 'ENTER' key to continue...\n";
             // while (temp != "CONTINUE" && temp != "continue")
             //     getline(cin >> ws, temp);
-            system("pause");
+
+            cout << "Press enter to continue...\n";
+            getchar();
         }
 
         showLeaderboard(participants, numberOfParticipants);

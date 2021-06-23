@@ -1,3 +1,4 @@
+#pragma once
 bool cmp1(participant a, participant b)
 {
     return (a.getName()).size() > (b.getName()).size();
@@ -8,7 +9,12 @@ bool cmp2(participant a, participant b)
 }
 void showLeaderboard(vector<participant> participants, int numberOfParticipants)
 {
-    system("cls");
+    #ifdef LINUX
+        system("clear");
+    #endif
+    #ifdef WINDOWS
+        system("cls");
+    #endif
     sort(participants.begin(), participants.end(), cmp1);
     int rankSpc = max(0, (int)log10(numberOfParticipants) - 10);
     int partSpc = max(0, (int)(participants[0].getName()).size() - 39), partSpcL = partSpc / 2, partSpcR = ceil((double)partSpc / 2);
@@ -109,7 +115,8 @@ void showLeaderboard(vector<participant> participants, int numberOfParticipants)
     for (int i = 0; i < netLen; i++)
         cout << "=";
     cout << "\n";
-    system("pause");
+    cout << "Press enter to continue...\n";
+    getchar();
     return;
 }
 
