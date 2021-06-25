@@ -4,21 +4,44 @@
 ___
 
 ## INTRODUCTION
-A simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming in C++.
-<br><br>
+A simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming and some File Handling in C++.
+
 
 ___
+
+
+<br>
 
 ## DESCRIPTION
+___
+#### EXECUTE
+* Run this single command in the root directory:
+    * for WINDOWS (cmd): `typit(windows).exe`
+    * for LINUX (terminal): &nbsp;`./typit(linux).out`
 
 ___
 
+#### CLASS DESIGN
+|CLASS|DESCRIPTION|
+|-----|-----------|
+|participant|stores all the participant related data as it's private member variables: participant's name, total score, max score over all the rounds, average accuracy, average speed;<br>has appropriate public member functions to access/alter/print the data|
+|sentence|stores just one sentence as it's private member variable;<br>it's constructor fetches a sentence of the given difficulty level from the assets and stores it;<br>also has public member function to add a sentence to the assets;
+
+
+
+___
+
+<br>
+
+
+## GAME SPAN
+___
 #### INPUTS
 1. Number of participants
-2. their names
-3. Number of rounds
-4. Desired difficulty level (1:Easy | 2:Medium | 3:Hard)
-5. And then, in each round every participant has to enter the given sentence
+4. their names
+5. Number of rounds
+6. Desired difficulty level (1:Easy | 2:Medium | 3:Hard)
+7. And then, in each round every participant has to enter the given sentence
 
 ___
 
@@ -68,6 +91,7 @@ SCORING RULES:
                   iv) Luck ;)
             
 ``` -->
+<br><br>
 ## TECH STACK
 * C++
 
