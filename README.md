@@ -2,15 +2,6 @@
 
 ___
 
-* [INTRODUCTION](#introduction)
-* [DESCRIPTION](#description)
-   * [Execute](#execute)
-   * [Class Design](#class-design)
-* [GAME SPAN](#game-span)
-   * [Inputs](#inputs)
-   * [Outputs](#outputs)
-   * [Scoring Rules](#scoring-rules)
-* [TECH STACK](#tech-stack)
 
 
 ___
