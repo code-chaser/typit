@@ -1,6 +1,7 @@
-# typit &nbsp; ![views](https://visitor-badge.glitch.me/badge?page_id=code-chaser.typit) &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# typit &nbsp; ![views](https://visitor-badge.glitch.me/badge?page_id=code-chaser.typit) &nbsp;![last commit](https://img.shields.io/aur/last-modified/f?label=Last%20commit) &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ___
+
 
 ## INTRODUCTION
 A simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming and some File Handling in C++.
