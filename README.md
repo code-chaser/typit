@@ -27,7 +27,11 @@ ___
 |participant|stores all the participant related data as it's private member variables: participant's name, total score, max score over all the rounds, average accuracy, average speed;<br>has appropriate public member functions to access/alter/print the data|
 |sentence|stores just one sentence as it's private member variable;<br>it's constructor fetches a sentence of the given difficulty level from the assets and stores it;<br>also has public member function to add a sentence to the assets;
 
+___
 
+####
+
+![typit_class_diagram](https://user-images.githubusercontent.com/63065397/123527092-53bd1200-d6fa-11eb-8675-4ceea2afa525.jpeg)
 
 ___
 
