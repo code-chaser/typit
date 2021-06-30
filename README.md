@@ -17,8 +17,8 @@ ___
 #### EXECUTE
 * Run this single command in the root directory `make`:
 * After that:
-    * for WINDOWS (cmd): `typit(windows).exe`
-    * for LINUX (terminal): &nbsp;`./typit(linux).out`
+    * for WINDOWS (cmd): `"typit(windows).exe"`
+    * for LINUX (terminal): &nbsp;`"./typit(linux).out"`
 
 ___
 
