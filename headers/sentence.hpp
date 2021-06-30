@@ -1,4 +1,4 @@
-#pragma once
+#pragma once //include guard
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -17,7 +17,7 @@ public:
         {
         case 1:
             f.open("./assets/easySentences.txt", ios::in);
-			int totalLines=0;
+	        int totalLines=0;
 			while(getline(f >> ws, s))
 				totalLines++;
 			int lineNumber = (abs(rand())) % totalLines;
