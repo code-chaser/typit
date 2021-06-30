@@ -15,7 +15,11 @@ ___
 ## DESCRIPTION
 ___
 #### EXECUTE
-* Run this single command in the root directory `make`:
+* For Windows users: firstly install `make` for executing `makefile`, from this [link](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows);
+* For Linux users: `make` generally comes pre-installed;
+   * if not, then run the following command: 
+ <br>   ```sudo apt-get install make```
+* Now, run this single command in the root directory `make`;
 * After that:
     * for WINDOWS (cmd): `"typit(windows).exe"`
     * for LINUX (terminal): &nbsp;`"./typit(linux).out"`
