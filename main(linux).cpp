@@ -55,7 +55,7 @@ int main()
         cout << "Enter a valid choice (1|2|3)!\n", cin >> choice;
     if (choice == 1)
     {
-        system("cls");
+        system("clear");
         printMainHeader();
         int numberOfParticipants = 0;
         cout << "Enter total number of participants:\n";
@@ -205,14 +205,14 @@ int main()
     }
     else if (choice == 2)
     {
-        system("cls");
+        system("clear");
         printMainHeader();
         sentence s(1);
         s.addSentence();
     }
     else
     {
-        system("cls");
+        system("clear");
         printMainHeader();
         cout << "Exiting typit...\nHope to see you back soon!\n";
         return 0;
