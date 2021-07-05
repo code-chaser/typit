@@ -13,37 +13,36 @@ public:
     {
         srand(time(NULL));
         fstream f;
+
+        int totalLines = 0, lineNumber;
         switch (difficulty)
         {
         case 1:
             f.open("./assets/easySentences.txt", ios::in);
-	        int totalLines=0;
-			while(getline(f >> ws, s))
-				totalLines++;
-			int lineNumber = (abs(rand())) % totalLines;
-			f.close();
+            while (getline(f >> ws, s))
+                totalLines++;
+            lineNumber = (abs(rand())) % totalLines;
+            f.close();
             f.open("./assets/easySentences.txt", ios::in);
             while (lineNumber--)
                 getline(f >> ws, s);
             break;
         case 2:
             f.open("./assets/mediumSentences.txt", ios::in);
-			int totalLines=0;
-			while(getline(f >> ws, s))
-				totalLines++;
-			int lineNumber = (abs(rand())) % totalLines;
-			f.close();
+            while (getline(f >> ws, s))
+                totalLines++;
+            lineNumber = (abs(rand())) % totalLines;
+            f.close();
             f.open("./assets/mediumSentences.txt", ios::in);
             while (lineNumber--)
                 getline(f >> ws, s);
             break;
         case 3:
             f.open("./assets/hardSentences.txt", ios::in);
-			int totalLines=0;
-			while(getline(f >> ws, s))
-				totalLines++;
-			int lineNumber = (abs(rand())) % totalLines;
-			f.close();
+            while (getline(f >> ws, s))
+                totalLines++;
+            lineNumber = (abs(rand())) % totalLines;
+            f.close();
             f.open("./assets/hardSentences.txt", ios::in);
             while (lineNumber--)
                 getline(f >> ws, s);
