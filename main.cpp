@@ -1,13 +1,24 @@
-#define WINDOWS
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <ctime>
 #include <math.h>
 #include <vector>
 #include <algorithm>
 #include <iomanip>
 using namespace std;
+#ifdef _WIN32
+#include <windows.h>
+#define color system("Color 0A");
+#define clr_here system("cls");
+#define pause_here system("pause");
+#else
+#include <unistd.h>
+#define color
+#define clr_here system("clear");
+#define pause_here cout << "Press enter to continue...\n",getchar();
+#endif
 #include "./headers/sentence.hpp"
 #include "./headers/participant.hpp"
 #include "./headers/leaderboard.hpp"
@@ -39,12 +50,12 @@ int main()
 {
     while (1)
     {
-        system("Color 0A");
-        system("cls");
+        color
+        clr_here
         printMainHeader();
         cout << "\n\n   W E L C O M E  T O  T Y P I T !   \n\n\n\n\n";
-        system("pause");
-        system("cls");
+        pause_here
+        clr_here
         printMainHeader();
         cout << "Choose an option:\n";
         cout << "\n[1]: Play"
@@ -57,7 +68,7 @@ int main()
             cout << "Enter a valid choice (1|2|3)!\n", cin >> choice;
         if (choice == 1)
         {
-            system("cls");
+            clr_here
             printMainHeader();
             int numberOfParticipants = 0;
             cout << "Enter total number of participants:\n";
@@ -67,7 +78,7 @@ int main()
                 if (numberOfParticipants <= 0)
                     cout << "Was that supposed to make any kind of sense?!\nAdd some sense and enter again!\n";
             }
-            system("cls");
+            clr_here
             printMainHeader();
             vector<participant> participants;
             for (int i = 0; i < numberOfParticipants; i++)
@@ -75,7 +86,7 @@ int main()
                 participant temp(i + 1);
                 participants.push_back(temp);
             }
-            system("cls");
+            clr_here
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             printMainHeader();
             int difficulty = 0;
@@ -88,13 +99,13 @@ int main()
                     cout << "Invalid difficulty level!\n";
                 }
             }
-            system("cls");
+            clr_here
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             printMainHeader();
             int rounds = 0;
             cout << "Enter the number of rounds you want to play:\n";
             cin >> rounds;
-            system("cls");
+            clr_here
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             printMainHeader();
             cout << "\nRead the instructions below carefully.\n\n\n";
@@ -127,8 +138,11 @@ int main()
             // {
             //     cin >> temp;
             // } while (temp != "NEXT" && temp != "next");
-            system("pause");
-            system("cls");
+            pause_here
+            #ifndef _WIN32
+            getchar();
+            #endif
+            clr_here
             printMainHeader();
             cout << "\nRead the scoring & ranking rules carefully.\n\n\n";
             cout << ">>SCORING & RANKING:" << endl;
@@ -148,7 +162,7 @@ int main()
             // {
             //     cin >> temp;
             // } while (temp != "START" && temp != "start");
-            system("pause");
+            pause_here
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             for (int i = 0; i < rounds; i++)
@@ -158,7 +172,7 @@ int main()
                 for (int j = 0; j < numberOfParticipants; j++)
                 {
                     temp = "";
-                    system("cls");
+                    clr_here
                     printMainHeader();
                     printRoundHeader(i + 1);
                     participants[j].printName();
@@ -166,11 +180,11 @@ int main()
                     cout << "Given Sentence: \n\n";
                     cout << sen1 << "\n\n";
                     string sen2 = "";
-                    system("pause");
+                    pause_here
                     // cout << "Type 'READY' and press the 'ENTER' key to start the timer.\n";
                     // while (sen2 != "READY")
                     //     getline(cin >> ws, sen2);
-                    system("cls");
+                    clr_here
                     printMainHeader();
                     printRoundHeader(i + 1);
                     cout << sen1 << "\n\n";
@@ -183,7 +197,7 @@ int main()
                         if (sen1[k] == sen2[k])
                             score++;
                     }
-                    system("cls");
+                    clr_here
                     printMainHeader();
                     printRoundHeader(i + 1);
                     participants[j].printName();
@@ -201,7 +215,7 @@ int main()
                     // cout << "\n\n\nType 'CONTINUE' and press the 'ENTER' key to continue...\n";
                     // while (temp != "CONTINUE" && temp != "continue")
                     //     getline(cin >> ws, temp);
-                    system("pause");
+                    pause_here
                 }
 
                 showLeaderboard(participants, numberOfParticipants);
@@ -209,14 +223,14 @@ int main()
         }
         else if (choice == 2)
         {
-            system("cls");
+            clr_here
             printMainHeader();
             sentence s(1);
             s.addSentence();
         }
         else
         {
-            system("cls");
+            clr_here
             printMainHeader();
             cout << "Exiting typit...\nHope to see you back soon!\n";
             return 0;
