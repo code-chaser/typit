@@ -19,10 +19,9 @@ ___
 * For Linux users: `make` generally comes pre-installed;
    * if not, then run the following command: 
  <br>   ```sudo apt-get install make```
-* Now, run this single command in the root directory `make`;
-* After that:
-    * for WINDOWS (cmd): `"typit(windows).exe"`
-    * for LINUX (terminal): &nbsp;`"./typit(linux).out"`
+* Now, run the following commands in the root directory:
+  * `make all` : builds executable file;
+  * `make run` : executes it;
 
 ___
 
