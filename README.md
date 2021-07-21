@@ -4,7 +4,7 @@ ___
 
 
 ## INTRODUCTION
-A simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming and some File Handling in C++.
+a simple typing accuracy &amp; speed tester game/tool made using Object Oriented Programming and some File Handling in C++
 
 
 ___
