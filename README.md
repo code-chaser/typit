@@ -14,15 +14,25 @@ ___
 
 ## DESCRIPTION
 ___
-#### EXECUTE
-* For Windows users: firstly install `make` for executing `makefile`, from this [link](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows);
-* For Linux users: `make` generally comes pre-installed;
-   * if not, then run the following command: 
- <br>   ```sudo apt-get install make```
-* Now, run the following commands in the root directory:
-  * `make all` : builds executable file;
-  * `make run` : executes it;
-
+#### BUILD & EXECUTE
+- For Windows users: firstly install ` make ` for executing ` makefile `, from this [link](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows);
+- For Linux users: ` make ` generally comes pre-installed;
+   - if not, then run the following command: ` sudo apt-get install make `
+   <br>
+- Now, run the following commands:
+   - for building executable file: 
+  ```bash
+     make all
+  ```
+   - for executing it:
+  ```bash
+     make run        # universal;
+  ```
+   - for deleting executable file:
+  ```bash
+     make clean      # for linux/macOS;
+     make clean(win) # for windows;
+  ```
 ___
 
 #### CLASS DESIGN
