@@ -1,4 +1,26 @@
-#pragma once
+#include "./../include/global.hh"
+
+void printRoundHeader(int roundNumber)
+{
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    for (int i = 0; i < log10((roundNumber == 0) + roundNumber); i++)
+        cout << "~";
+    cout << "\n";
+    cout << "||------- ||R|O|U|N|D| |" << roundNumber << "|| -------||\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    for (int i = 0; i < log10((roundNumber == 0) + roundNumber); i++)
+        cout << "~";
+    cout << "\n\n";
+}
+void printMainHeader()
+{
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    cout << "\n";
+    cout << "||----- | T | Y | P | I | T | -----||\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    cout << "\n\n";
+    return;
+}
 bool cmp1(participant a, participant b)
 {
     return (a.getName()).size() > (b.getName()).size();
@@ -9,7 +31,7 @@ bool cmp2(participant a, participant b)
 }
 void showLeaderboard(vector<participant> participants, int numberOfParticipants)
 {
-    clr_here
+    clr_here;
     sort(participants.begin(), participants.end(), cmp1);
     int rankSpc = max(0, (int)log10(numberOfParticipants) - 10);
     int partSpc = max(0, (int)(participants[0].getName()).size() - 39), partSpcL = partSpc / 2, partSpcR = ceil((double)partSpc / 2);
@@ -110,8 +132,6 @@ void showLeaderboard(vector<participant> participants, int numberOfParticipants)
     for (int i = 0; i < netLen; i++)
         cout << "=";
     cout << "\n";
-    pause_here
+    pause_here;
     return;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
