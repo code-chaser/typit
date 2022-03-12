@@ -9,9 +9,6 @@ a simple typing accuracy &amp; speed tester game/tool made using basic C++ with 
 
 ___
 
-
-<br>
-
 ## DESCRIPTION
 ___
 #### BUILD & EXECUTE
