@@ -4,7 +4,7 @@ ___
 
 
 ## INTRODUCTION
-a simple typing accuracy &amp; speed tester game/tool made using basic C++ with a bit of file handling
+A simple typing accuracy &amp; speed tester game/tool made using basic C++ with a bit of file handling.
 
 
 ___
