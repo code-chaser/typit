@@ -98,7 +98,7 @@ ___
 SCORING RULES:
   1) For each turn the score of the participant is equal to A/B (i.e. A divided by B)
      where: i) A equals, in the participant's input sentence, the nummber of characters that are '***__in place__***' as compared to the given 
-               statement and if that number happens to be less than 50% of total size of the given sentence them A = 0;
+               statement and if that number happens to be less than 50% of total size of the given sentence then A = 0;
            ii) B equals the time taken by the participant to type;
   2) Tie Breakers: i) Average Accuracy
                   ii) Average Speed
