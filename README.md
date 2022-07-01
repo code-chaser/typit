@@ -113,6 +113,6 @@ SCORING RULES:
 
 ___
 
->##### *Happy Typing!!! :)*
+>##### *Happy Typing! 😄*
 
 ___
